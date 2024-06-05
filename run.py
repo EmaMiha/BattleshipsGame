@@ -60,4 +60,9 @@ def play_game():
     ship_row,ship_col = set_ship(board, board_size)
     print("Let's having a battleships fun!")
     print_board(board)
-    
+
+    for turn in range(4):
+        print(f"Turn{Turn + 1}")   
+        guess_row, guess_col = make_guess()
+        if check_guess(board, guess_row, guess_col, ship_row, ship_col):
+            break
