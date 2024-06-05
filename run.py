@@ -15,3 +15,10 @@ def create_board(board):
     board = [["O"] * size for _ in range(size)]
     return board
 
+def set_ship(board, size):
+    """
+    Randomly places a single ship "S" on the board and returns its cordinates.
+    """
+    ship_row = random.randint(0, size -1)
+    ship_col = random.randint(0, size -1)
+    return (ship_row, ship_col)
