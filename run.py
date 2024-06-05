@@ -50,4 +50,14 @@ def check_guess(board, guess_row, guess_col, ship_row, ship_col):
             board [guess_row] [guess_col]  = "X" 
         return False     
 
+def play_game():
+    """
+    Manages the game, allows the player up to 4 turns to guess the ship's location 
+    and provides feedback.
+    """   
+    board_size = 5
+    board = create_board(board_size)
+    ship_row,ship_col = set_ship(board, board_size)
+    print("Let's having a battleships fun!")
+    print_board(board)
     
