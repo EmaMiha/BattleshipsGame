@@ -1,4 +1,4 @@
-
+import random
 
 def print_board(board):
     """ 
@@ -14,3 +14,4 @@ def create_board(board):
     """
     board = [["O"] * size for _ in range(size)]
     return board
+
