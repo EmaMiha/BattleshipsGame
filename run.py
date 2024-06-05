@@ -8,10 +8,7 @@ def print_board(board):
     for row in board: 
         print(" ".join(row))
 
-def create_board(board):
-    """
-    Creates a size x size board filled with "O", which represent the sea.
-    """
+def create_board(size):
     board = [["O"] * size for _ in range(size)]
     return board
 
@@ -27,8 +24,8 @@ def make_guess ():
     """
     Prompts the player to input their guess for the row and column.
     """
-    guess_row = int(input("Guess Row: "))
-    guess_col = int(input("Guess Col: "))
+    guess_row = int(input("Guess Row:\n "))
+    guess_col = int(input("Guess Col:\n "))
     return(guess_row, guess_col)
 
 def check_guess(board, guess_row, guess_col, ship_row, ship_col):
@@ -62,7 +59,13 @@ def play_game():
     print_board(board)
 
     for turn in range(4):
-        print(f"Turn{Turn + 1}")   
+        print(f"Turn {turn + 1}")
         guess_row, guess_col = make_guess()
         if check_guess(board, guess_row, guess_col, ship_row, ship_col):
             break
+        print_board(board)
+        if turn == 3:
+            print("Game Over")
+            print(f"The ship was at ({ship_row}, {ship_col})")
+    
+play_game()  
