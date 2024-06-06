@@ -14,11 +14,33 @@ To play the game, player simply runs the script. The game will prompt player for
 ### Features
 
 • Ships are randomly places on the board.
+
 • Player can not enter the same guess twice and can not enter the cordinates outside of the board.
 
 ### Testing 
 
 • I've manually tested the project in my local terminal and the Code Institute Heroku terminal.
+
 • I've tried to test it on PEP8online.com but it didn't work out, so I made it on pythonchecker.com and no erors were returned. 
 
 ![Testing](/images/Testing.png)
+
+
+### Deployment
+
+The project was deployed using Code Institute's mock terminal on Heroku:
+
+• Clone the repository
+
+• Create the new Heroku app
+
+• Set the buildbacks to Python and NodeJS
+
+• Link the Hiroku app to the GitHub repository
+
+• Click on Automatic or Manual Deploy
+
+
+#### Credits
+
+• Code Institute for the deployment terminal
